@@ -47,43 +47,44 @@
             </md-tab>
             <md-tab label="Hearthstone">Hearthstone</md-tab>
         </md-tabs>
+        <md-content>
+            <div layout="row" ng-controller="ContentController as content" layout-wrap layout-sm="column" ng-class="myVar">
+                <md-card flex="66" flex-sm="100" class="gameCard">
+                    <div>
+                        <img src="images/1920_1080_2.jpg" width="100%" height="auto" />
+                        <h3>Samsung White vs. Star Horn Royal Club {{myVar}}</h3>
+                        <p>Hotly anticipated final with 2 of the biggest teams in esports!</p>
+                        <md-button class="md-primary md-hue-1" ng-click="myVar='expanded'">More Info</md-button>
+                    </div>
+                </md-card>
 
-        <div layout="row" ng-controller="ContentController as content" layout-wrap layout-sm="column" ng-class="myVar">
-            <md-card flex="66" flex-sm="100" class="gameCard">
-                <div>
-                    <img src="images/1920_1080_2.jpg" width="100%" height="auto" />
-                    <h3>Samsung White vs. Star Horn Royal Club {{myVar}}</h3>
-                    <p>Hotly anticipated final with 2 of the biggest teams in esports!</p>
-                    <md-button class="md-primary md-hue-1" ng-click="myVar='expanded'">More Info</md-button>
-                </div>
-            </md-card>
+                <md-card flex="32" flex-sm="100">
+                    <md-tabs class="md-inverted">
+                        <md-tab>
+                            <md-tab-label>Upcoming</md-tab-label>
+                            <md-list>
+                                <md-item>
+                                    <md-item-content>
+                                        <div class="md-tile-left">
+                                            <img ng-src="//placehold.it/20x20" class="face" alt="{{item.who}}">
+                                        </div>
+                                        <div class="md-tile-content">
+                                            <h3>pll</h3>
+                                            <h4>{{item.who}}</h4>
+                                            <p>
+                                                {{item.notes}}
+                                            </p>
+                                        </div>
+                                    </md-item-content>
+                                </md-item>
+                            </md-list>
+                        </md-tab>
+                        <md-tab label="Recent results"></md-tab>
 
-            <md-card flex="32" flex-sm="100">
-                <md-tabs class="md-inverted">
-                    <md-tab>
-                        <md-tab-label>Upcoming</md-tab-label>
-                        <md-list>
-                            <md-item>
-                                <md-item-content>
-                                    <div class="md-tile-left">
-                                        <img ng-src="//placehold.it/20x20" class="face" alt="{{item.who}}">
-                                    </div>
-                                    <div class="md-tile-content">
-                                        <h3>pll</h3>
-                                        <h4>{{item.who}}</h4>
-                                        <p>
-                                            {{item.notes}}
-                                        </p>
-                                    </div>
-                                </md-item-content>
-                            </md-item>
-                        </md-list>
-                    </md-tab>
-                    <md-tab label="Recent results"></md-tab>
-
-                </md-tabs>
-            </md-card>
-        </div>
+                    </md-tabs>
+                </md-card>
+            </div>
+        </md-content>
     </div>
 
 
