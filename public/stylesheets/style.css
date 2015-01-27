@@ -1,0 +1,129 @@
+.menu-item {
+    background: none;
+    border-width: 0;
+    cursor: pointer;
+    display: block;
+    color: #333;
+    font-size: inherit;
+    line-height: 40px;
+    max-height: 40px;
+    opacity: 1;
+    margin: 0;
+    outline: none;
+    padding: 0px 28px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    z-index: 1;
+    -webkit-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-transition-property: max-height, background-color, opacity;
+    -moz-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+    -moz-transition-property: max-height, background-color, opacity;
+    transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+    transition-property: max-height, background-color, opacity;
+}
+.menu-item.ng-hide {
+    max-height: 0;
+    opacity: 0;
+}
+.menu-item:hover {
+    color: #999;
+}
+.menu-item:focus {
+    font-weight: bold;
+}
+.menu-item.menu-title {
+    color: #888;
+    font-size: 14px;
+    padding-left: 16px;
+    text-align: left;
+    text-transform: uppercase;
+    transition: color 0.35s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.menu-item.menu-title:hover,
+.menu-item.menu-title.active {
+    color: #1976d2;
+}
+.md-inverted section.md-header {
+    background-color: white;
+}
+.md-inverted section.md-header md-tab {
+    color: #90CAF9;
+}
+.md-inverted section.md-header md-tab.active {
+    color: #03a9f4;
+}
+.md-inverted section.md-header md-tabs-ink-bar {
+    color: #03a9f4;
+    background: #03a9f4;
+}
+.md-inverted section.md-header .md-ripple-container {
+    color: #03a9f4;
+}
+body {
+    background-color: #E3F2FD;
+}
+md-card {
+    background-color: white;
+}
+@media (max-width: 600px) {
+    md-card.md-default-theme {
+        max-width: 100%
+    }
+}
+md-content.md-default-theme {
+    background-color: transparent;
+}
+.md-paginator.md-next,
+.md-paginator.md-prev {
+    -webkit-filter: invert(39%);
+}
+.expanded .gameCard div {
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.expanded .gameCard div img {
+    height: 400px;
+    width: 100vw;
+}
+.expanded .gameCard div h3,
+.expanded .gameCard div p {
+    padding: 15px;
+}
+@keyframes slide {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: 488px;
+        top: 0;
+    }
+}
+.stage {
+    background: #eaeaed;
+    border-radius: 6px;
+    height: 150px;
+    position: relative;
+    min-width: 538px;
+}
+.stage:hover .ball {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: .5s;
+}
+.ball {
+    background: #2db34a;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+input[type="button"] {
+    outline: none;
+}

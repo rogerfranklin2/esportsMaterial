@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CoinBet</title>
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/themes/blue-theme.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-app="coinBet" ng-controller="CoinBetController" layout="row">
+
+
+    <md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$media('gt-md')">
+        <md-toolbar>
+            <span class="md-flex" style="padding-top: 90px;">CoinBetLogo</span>
+        </md-toolbar>
+        <div ng-controller="NavController as nav">
+            <div>
+                <md-button ng-click="nav.setSelectedMenu('news')" class="menu-item menu-title">News</md-button>
+                <md-button class="menu-item menu-title">Fixtures</md-button>
+                <md-button class="menu-item menu-title">Results</md-button>
+            </div>
+            <div class="">
+                <md-button class="menu-item menu-title" ng-click="nav.setSelectedMenu('account')">My Account</md-button>
+                <div ng-show="nav.isSectionSelected('account')">
+                    <md-button class="menu-item">Open Bets</md-button>
+                    <md-button class="menu-item">Account Information</md-button>
+                    <md-button class="menu-item">Past bets</md-button>
+                </div>
+            </div>
+        </div>
+    </md-sidenav>
+
+    <div layout="column" layout-fill layout-algin-sm="layout-align-sm">
+        <md-toolbar>
+            <span class="md-flex">CoinBet</span>
+        </md-toolbar>
+
+        <md-tabs>
+            <md-tab label="League of legends">League of legends</md-tab>
+            <md-tab label="Dota">Dota
+                <md-button class="material-button-inner"></md-button>
+            </md-tab>
+            <md-tab label="Hearthstone">Hearthstone</md-tab>
+        </md-tabs>
+
+        <div layout="row" ng-controller="ContentController as content" layout-wrap layout-sm="column" ng-class="myVar">
+            <md-card flex="66" flex-sm="100" class="gameCard">
+                <div>
+                    <img src="images/1920_1080_2.jpg" width="100%" height="auto" />
+                    <h3>Samsung White vs. Star Horn Royal Club {{myVar}}</h3>
+                    <p>Hotly anticipated final with 2 of the biggest teams in esports!</p>
+                    <md-button class="md-primary md-hue-1" ng-click="myVar='expanded'">More Info</md-button>
+                </div>
+            </md-card>
+
+            <md-card flex="32" flex-sm="100">
+                <md-tabs class="md-inverted">
+                    <md-tab>
+                        <md-tab-label>Upcoming</md-tab-label>
+                        <md-list>
+                            <md-item>
+                                <md-item-content>
+                                    <div class="md-tile-left">
+                                        <img ng-src="//placehold.it/20x20" class="face" alt="{{item.who}}">
+                                    </div>
+                                    <div class="md-tile-content">
+                                        <h3>pll</h3>
+                                        <h4>{{item.who}}</h4>
+                                        <p>
+                                            {{item.notes}}
+                                        </p>
+                                    </div>
+                                </md-item-content>
+                            </md-item>
+                        </md-list>
+                    </md-tab>
+                    <md-tab label="Recent results"></md-tab>
+
+                </md-tabs>
+            </md-card>
+        </div>
+    </div>
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/hammerjs/hammer.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="javascripts/app.js"></script>
+
+</body>
+
+</html>
+
