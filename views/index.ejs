@@ -21,8 +21,8 @@
         <div ng-controller="NavController as nav">
             <div>
                 <md-button ng-click="nav.setSelectedMenu('news')" class="menu-item menu-title">News</md-button>
-                <md-button class="menu-item menu-title">Fixtures</md-button>
-                <md-button class="menu-item menu-title">Results</md-button>
+                <md-button ng-click="nav.setSelectedMenu('fixtures')" class="menu-item menu-title">Fixtures</md-button>
+                <md-button ng-click="nav.setSelectedMenu('results')" class="menu-item menu-title">Results</md-button>
             </div>
             <div class="">
                 <md-button class="menu-item menu-title" ng-click="nav.setSelectedMenu('account')">My Account</md-button>
